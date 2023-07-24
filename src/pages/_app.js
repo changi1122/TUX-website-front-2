@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import '@/styles/markdown.scss'
+import '@/styles/Pagination.scss';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

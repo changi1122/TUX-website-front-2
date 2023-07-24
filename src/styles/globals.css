@@ -55,9 +55,9 @@ table {
 }
 
 .row {
-  max-width: 740px;
+  max-width: 730px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 hr {
@@ -89,10 +89,10 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #a8a8a8;
+    background: #c5c5c5;
     border-radius: 3px
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #8a8a8a
+    background: #c5c5c5
 }

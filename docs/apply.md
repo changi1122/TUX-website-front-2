@@ -1,3 +1,5 @@
+<div class='max-w px-6 py-3 bg-white border border-gray-200 rounded-lg shadow' style='padding-top:1px'>
+
 # 23년도 1학기 신입 동아리 부원 모집 (종료)
 
 [홍보 자료 보기](https://forms.gle/1E6bSkGReNZ8Zp5k6)
@@ -39,3 +41,5 @@ TUX 동아리에서 23년도 1학기 신입 동아리 부원을 모집합니다.
 부회장 조민우 : 0<span></span>1<span></span>0-5<span></span>3<span></span>9<span></span>8-8<span></span>3<span></span>6<span></span>6
 
 <br>
+
+</div>

@@ -34,8 +34,11 @@ export default function QuillEditor({ body, handleQuillChange, mountBody }) {
                     [{ 'indent': '-1'}, { 'indent': '+1' }],            // outdent/indent
                     //[{ 'direction': 'rtl' }],                           // text direction
                     ['clean'],                                          // remove formatting button
-                    //['blockquote', 'link', 'code-block', 'formula', 'image', 'video'] // media
+                    [/*'blockquote',*/ 'link', /*'code-block', 'formula',*/ 'image', /*'video'*/] // media
                 ],
+                handlers: {
+                    image: imageHandler
+                }
             };
 
             quillInstance.current = new window.Quill(quillElement.current, {
@@ -51,7 +54,15 @@ export default function QuillEditor({ body, handleQuillChange, mountBody }) {
                 placeholder: "본문을 입력하세요",
                 theme : 'snow'
             });
-            
+
+            function imageHandler() {
+                var range = quill.getSelection();
+                var value = prompt('이미지 URL을 붙여넣어 주세요.');
+                if(value){
+                    this.quill.insertEmbed(range.index, 'image', value, Quill.sources.USER);
+                }
+            }
+
             const quill = quillInstance.current;
 
             quill.root.setAttribute("spellcheck", "false");
@@ -75,7 +86,6 @@ export default function QuillEditor({ body, handleQuillChange, mountBody }) {
             setIsError((prevIsError) => (!prevIsError));
         }
     }, [isError, mountBody]);
-
 
     return (
         <div ref={quillElement}></div>

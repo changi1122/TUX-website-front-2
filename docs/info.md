@@ -1,3 +1,5 @@
+<div class='max-w px-6 py-3 bg-white border border-gray-200 rounded-lg shadow' style='padding-top:1px'>
+
 ## TUX : 충북대학교 소프트웨어학부 Linux & OSS 학술 동아리
 
 TUX는 Linux 및 Open Source Software를 중점적으로 연구하는 충북대학교 소프트웨어학부 소속 학술 동아리입니다. 2021년부터 본격적인 활동이 시작된 동아리로, Linux의 응용과 실습을 바탕으로 OSS를 이해하고, 활용할 능력을 갖추는 걸 목표로 하고 있습니다.
@@ -55,3 +57,5 @@ TUX에서는 Linux에 대한 연구, 나아가서 RedHat Certified 자격증 취
 [CBNU-TUX Github](https://github.com/orgs/CBNU-TUX/repositories)
 
 <br>
+
+</div>

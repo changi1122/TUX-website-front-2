@@ -145,64 +145,64 @@ export default function signup() {
                 </div>
                 <div className="mt-8 mb-4">
                     <input type="text" id="id" className={ inputError[0] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="아이디" value={username} onChange={(e) => { setUsername(e.target.value) }}/>
                 </div>
                 <div className="mb-4">
                     <input type="password" id="password" className={ inputError[1] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="비밀번호" value={password} onChange={(e) => { setPassword(e.target.value) }} required/>
                 </div>
                 <div className="mb-4">
                     <input type="password" id="repassword" className={ inputError[2] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="비밀번호 재확인" value={rePassword} onChange={(e) => { setRePassword(e.target.value) }} required/>
                 </div>
                 <div className="mb-8">
                     <input type="email" id="email" className={ inputError[3] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="이메일" value={email} onChange={(e) => { setEmail(e.target.value) }}/>
                 </div>
                 <div className="mb-4">
                     <input type="text" id="nickname" className={ inputError[4] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="이름 (18학번 홍길동)" value={nickname} onChange={(e) => { setNickname(e.target.value) }}/>
                 </div>
                 <div className="mb-4">
                     <input type="text" id="department" className={ inputError[5] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="학과 (소프트웨어학부)" value={department} onChange={(e) => { setDepartment(e.target.value) }}/>
                 </div>
                 <div className="mb-4">
                     <input type="text" id="studentNumber" className={ inputError[6] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="학번 (20XXXXXXXX)" value={studentNumber} onChange={(e) => { setStudentNumber(e.target.value) }}/>
                 </div>
                 <div className="mb-4">
                     <input type="tel" id="phoneNumber" className={ inputError[7] ?
-                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5" :
+                        "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" :
                         "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"}
                         placeholder="휴대폰 번호 (010-XXXX-XXXX)" value={phoneNumber} onChange={(e) => { setPhoneNumber(e.target.value) }}/>
                 </div>
                 <div className="flex items-start mb-6">
                     <div className="flex items-center h-5">
-                    <input id="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                    <input id="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
                         value={ruleAgree} onChange={(e) => { setRuleAgree(e.target.checked) }} required/>
                     </div>
-                    <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"><a href="/privacy" target='_blank' className="text-blue-600 hover:underline dark:text-blue-500">개인정보 처리방침</a>에 동의합니다.</label>
+                    <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900"><a href="/privacy" target='_blank' className="text-blue-600 hover:underline">개인정보 처리방침</a>에 동의합니다.</label>
                 </div>
-                <button onClick={validate} type="button" className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                <button onClick={validate} type="button" className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
                     회원가입
                 </button>
                 <div className='text-right'>
-                    <Link href="/login" className="mt-4 mb-12 inline-block font-medium text-blue-600 dark:text-blue-500 hover:underline">이미 계정이 있으신가요?</Link>
+                    <Link href="/login" className="mt-4 mb-12 inline-block font-medium text-blue-600 hover:underline">이미 계정이 있으신가요?</Link>
                 </div>
             </form>
         </main>
