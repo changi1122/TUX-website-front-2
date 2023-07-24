@@ -1,7 +1,36 @@
+import getCurrentUser from '@/lib/getCurrentUser';
+import logout from '@/lib/logout';
+import { useCustomContext } from '@/reducers/customContext';
 import styles from '@/styles/Header.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+    const router = useRouter();
+    const { state, dispatch } = useCustomContext();
+
+    const [isUserMenuOpened, setIsUserMenuOpened] = useState(false);
+
+    /* 최초 로그인 상태 확인 */
+    useEffect(() => {
+        getCurrentUser(dispatch);
+    }, []);
+
+    function roleString(role) {
+        switch(role) {
+            case 'GUEST':
+                return '게스트';
+            case 'USER':
+                return '회원';
+            case 'MANAGER':
+                return '관리자';
+            case 'ADMIN':
+                return '최고관리자';
+        }
+    }
+
+
     return (
       <header className='row'>
         <div className={styles.header}>
@@ -17,16 +46,38 @@ export default function Header() {
                 </div>
             </Link>
             <div className={styles.userArea}>
-                로그인
+                {
+                    !state.isLogined &&
+                    <Link href='/login' className={styles.loginButton}>로그인</Link>
+                }
+                {
+                    state.isLogined &&
+                    <>
+                        <div className={styles.userLabel} onClick={()=> { setIsUserMenuOpened(!isUserMenuOpened) }}>
+                            <p>{state.nickname}<span style={{color: '#777'}}>님</span></p>
+                            <p>{roleString(state.role)} <span style={{color: '#777'}}>권한</span></p>
+
+                            <div id="dropdown" className={styles.userMenu + " z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44"}
+                            style={{ display: (isUserMenuOpened) ? 'block' : 'none' }}>
+                                <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="#" className="block px-4 py-2 hover:bg-gray-100"
+                                            onClick={() => { logout(dispatch) }}>로그아웃</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </>
+                }
             </div>
         </div>
         <nav className={styles.nav}>
-            <Link href='/info'><li>소개</li></Link>
-            <Link href='/community'><li>커뮤니티</li></Link>
-            <Link href='/dataroom'><li>자료실</li></Link>
-            <Link href='/gallery'><li>갤러리</li></Link>
-            <Link href='/apply'><li>지원하기</li></Link>
-            <Link href='/contact'><li>연락처</li></Link>
+            <Link href='/info'><li className={router.pathname.startsWith('/info') ? styles.active : '' }>소개</li></Link>
+            <Link href='/community'><li className={router.pathname.startsWith('/community') ? styles.active : '' }>커뮤니티</li></Link>
+            <Link href='/dataroom'><li className={router.pathname.startsWith('/dataroom') ? styles.active : '' }>자료실</li></Link>
+            <Link href='/gallery'><li className={router.pathname.startsWith('/gallery') ? styles.active : '' }>갤러리</li></Link>
+            <Link href='/apply'><li className={router.pathname.startsWith('/apply') ? styles.active : '' }>지원하기</li></Link>
+            <Link href='/contact'><li className={router.pathname.startsWith('/contact') ? styles.active : '' }>연락처</li></Link>
         </nav>
       </header>
     )

@@ -1,0 +1,12 @@
+.loginForm {
+    margin: 0 auto;
+    padding-top: 60px;
+    max-width: 300px;
+}
+
+.loginForm .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}

@@ -1,8 +1,9 @@
 import { Remarkable } from 'remarkable';
-import path from 'path';
-import fs from 'fs';
 
 export async function getMarkdownDocs(filename) {
+    const fs = require('fs');
+    const path = require('path');
+
     const fullPath = path.join(__dirname + '../../../../docs/', `${filename}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
   
