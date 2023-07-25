@@ -70,6 +70,7 @@ main {
 	min-height: calc(100vh - 324px);
 }
 
+/* Quill 에디터 */
 .ql-toolbar {
 	border-radius: 0.5em 0.5em 0 0;
 }
@@ -79,6 +80,7 @@ main {
 }
 
 
+/* 스크롤바 */
 ::-webkit-scrollbar {
 	height: 7px;
 	width: 7px
@@ -96,3 +98,15 @@ main {
 ::-webkit-scrollbar-thumb:hover {
     background: #c5c5c5
 }
+
+/* 우하단 링크 다이얼 */
+.dialDiv:hover>.hidden {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 1023px) {
+	.dialDiv {
+		display: none;
+	}
+} 

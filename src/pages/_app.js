@@ -10,6 +10,7 @@ import { useReducer } from 'react';
 import CustomContext from '@/reducers/customContext';
 import { initialState, reducer } from '@/reducers';
 import configDayjsLocale from '@/config/configDayjsLocale';
+import LinkDial from '@/components/LinkDial';
 
 configDayjsLocale();
 
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
         <SnackbarProvider />
         <Component {...pageProps} />
         <Footer />
+        <LinkDial />
       </CustomContext.Provider>
     </div>
     </>
